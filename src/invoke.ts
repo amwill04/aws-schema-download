@@ -6,6 +6,7 @@ import { buildClientSchema, getIntrospectionQuery, introspectionFromSchema } fro
 import program from 'commander';
 import { GraphQLSchema } from 'graphql';
 import { writeFileSync } from 'fs';
+import chalk from 'chalk';
 
 // Set cli program
 program
@@ -54,7 +55,12 @@ invoke
     .then(
         (schema): void => {
             writeFileSync(program.output, JSON.stringify(introspectionFromSchema(schema), null, 2));
+            console.log(chalk.green(`Saved schema at ${program.output}`));
             return;
         }
     )
-    .catch((error): void => console.error(error));
+    .catch(
+        (error): void => {
+            console.error(chalk.bold.red(error.message));
+        }
+    );
