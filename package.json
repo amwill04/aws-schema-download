@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "./dist/invoke.js",
   "bin": {
-    "awd-schema-download": "./dist/invoke.js"
+    "aws-schema-download": "./dist/invoke.js"
   },
   "license": "MIT",
   "author": "Alan Williams <amwilliams89@icloud.com>",
