@@ -11,9 +11,9 @@ import { writeFileSync } from 'fs';
 program
     .version('0.0.1')
     .description('Download graphql schema with AWS IAM credentials')
+    .option('--function-name <functionName>', 'The name of the Lambda function, version, or alias')
     .option('--profile <profile>', 'AWS profile to use [default]', 'default')
     .option('--region <region>', 'AWS lambda region, [us-east-1]', 'us-east-1')
-    .option('--function-name <functionName>', 'The name of the Lambda function, version, or alias')
     .option('--output <output>', 'Output schema file. [schema.json]', 'schema.json')
     .parse(process.argv);
 
