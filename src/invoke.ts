@@ -10,7 +10,7 @@ import chalk from 'chalk';
 
 // Set cli program
 program
-    .version('0.0.1')
+    .version('1.0.1')
     .description('Download graphql schema with AWS IAM credentials')
     .option('--function-name <functionName>', 'The name of the Lambda function, version, or alias')
     .option('--profile <profile>', 'AWS profile to use [default]', 'default')
@@ -25,6 +25,23 @@ if (!program.functionName) {
 
 if (program.profile !== 'default') {
     AWS.config.credentials = new AWS.SharedIniFileCredentials({ profile: program.profile });
+}
+
+// Environment variables take precendence
+if (process.env.ACCESS_KEY_ID) {
+    AWS.config.credentials.accessKeyId = process.env.ACCESS_KEY_ID;
+}
+
+if (process.env.SECRET_ACCESS_KEY) {
+    AWS.config.credentials.secretAccessKey = process.env.SECRET_ACCESS_KEY;
+}
+
+// Check that credentials are set
+const { accessKeyId, secretAccessKey } = AWS.config.credentials;
+
+if (!(typeof accessKeyId === 'string' && typeof secretAccessKey === 'string')) {
+    console.error(chalk.bold.red('Missing AWS credentials'));
+    process.exit(1);
 }
 
 const query = getIntrospectionQuery();

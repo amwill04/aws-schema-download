@@ -1,6 +1,6 @@
 {
   "name": "aws-schema-download",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "./dist/invoke.js",
   "bin": {
     "aws-schema-download": "./dist/invoke.js"
