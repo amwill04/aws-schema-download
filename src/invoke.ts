@@ -11,7 +11,7 @@ import chalk from 'chalk';
 // Set cli program
 program
     .version('1.0.1')
-    .description('Download graphql schema with AWS IAM credentials')
+    .description('Download graphql schema from lambda')
     .option('--function-name <functionName>', 'The name of the Lambda function, version, or alias')
     .option('--profile <profile>', 'AWS profile to use [default]', 'default')
     .option('--region <region>', 'AWS lambda region, [us-east-1]', 'us-east-1')
