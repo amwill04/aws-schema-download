@@ -10,7 +10,8 @@
   "scripts": {
     "start": "ts-node src/invoke.ts",
     "build": "yarn eslint && rm -rf dist && NODE_ENV=production tsc -p .",
-    "eslint": "eslint --format 'node_modules/eslint-formatter-friendly' --fix --ext .ts src/**"
+    "eslint": "eslint --format 'node_modules/eslint-formatter-friendly' --fix --ext .ts src/**",
+    "publish": "yarn build && npm publish --access=public"
   },
   "devDependencies": {
     "@types/aws4": "^1.5.1",
