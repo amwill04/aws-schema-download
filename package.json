@@ -1,6 +1,6 @@
 {
   "name": "@awill1004/aws-schema-graphql",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "./dist/invoke.js",
   "bin": {
     "aws-schema-graphql": "./dist/invoke.js"
@@ -10,8 +10,7 @@
   "scripts": {
     "start": "ts-node src/invoke.ts",
     "build": "yarn eslint && rm -rf dist && NODE_ENV=production tsc -p .",
-    "eslint": "eslint --format 'node_modules/eslint-formatter-friendly' --fix --ext .ts src/**",
-    "publish": "yarn build && npm publish --access=public"
+    "eslint": "eslint --format 'node_modules/eslint-formatter-friendly' --fix --ext .ts src/**"
   },
   "devDependencies": {
     "@types/aws4": "^1.5.1",
