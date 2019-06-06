@@ -1,0 +1,13 @@
+.DS_STORE
+dist
+node_modules
+.idea
+.vscode
+yarn-error.log
+src
+.eslintignore
+.eslintrc.js
+.prettierrc
+jest.config.js
+tsconfig.json
+yarn.lock
