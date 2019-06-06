@@ -1,11 +1,11 @@
-# aws-schema-download
+# AWS Lambda Graphql Schema Download
 
 AWS schema download CLI to download GraphQL schema from AWS lambda when GraphQL server is via API Gateway and has an authorizer.
 
 # Usage
 
 ```sh-session
-$ npm install -g  aws-schema-download
+$ npm install -g  @awill1004/aws-schema-graphql
 $ aws-scehma-download --function-name blah
 ```
 
