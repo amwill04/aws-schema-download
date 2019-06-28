@@ -1,6 +1,11 @@
 {
   "name": "@awill1004/aws-schema-graphql",
   "version": "1.0.4",
+  "homepage": "https://github.com/amwill04/aws-schema-download",
+  "keywords": ["aws", "schema", "graphql"],
+  "bugs": {
+    "url": "https://github.com/amwill04/aws-schema-download/issues"
+  },
   "main": "./dist/invoke.js",
   "bin": {
     "aws-schema-graphql": "./dist/invoke.js"
