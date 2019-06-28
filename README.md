@@ -6,7 +6,7 @@ AWS schema download CLI to download GraphQL schema from AWS lambda when GraphQL 
 
 ```sh-session
 $ npm install -g  @awill1004/aws-schema-graphql
-$ aws-schema-graphql --function-name foo
+$ aws-schema-graphql --function-name labmda-name
 ```
 
 ### Arguments

@@ -1,6 +1,6 @@
 {
   "name": "@awill1004/aws-schema-graphql",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "./dist/invoke.js",
   "bin": {
     "aws-schema-graphql": "./dist/invoke.js"
