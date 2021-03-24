@@ -50,6 +50,7 @@ const payload = {
     httpMethod: 'POST',
     body: JSON.stringify({ query }),
     headers: {},
+    path: '/',
 };
 
 const lambda = new AWS.Lambda({ region: program.region });
