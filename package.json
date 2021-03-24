@@ -2,7 +2,11 @@
   "name": "@awill1004/aws-schema-graphql",
   "version": "1.0.4",
   "homepage": "https://github.com/amwill04/aws-schema-download",
-  "keywords": ["aws", "schema", "graphql"],
+  "keywords": [
+    "aws",
+    "schema",
+    "graphql"
+  ],
   "bugs": {
     "url": "https://github.com/amwill04/aws-schema-download/issues"
   },
@@ -38,6 +42,7 @@
     "husky": ">=1",
     "jest": "^24.8.0",
     "lint-staged": ">=8",
+    "np": "^7.4.0",
     "prettier": "^1.17.1",
     "ts-jest": "^24.0.2",
     "ts-node": "^8.2.0",
